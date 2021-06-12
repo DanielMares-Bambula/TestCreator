@@ -1,0 +1,16 @@
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\bin\Debug\TestCreator.exe.config
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\bin\Debug\TestCreator.exe
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\bin\Debug\TestCreator.pdb
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\TestCreator.csprojAssemblyReference.cache
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\MainWindow.g.cs
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\App.g.cs
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\TestCreator_MarkupCompile.cache
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\TestCreator_MarkupCompile.lref
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\MainWindow.baml
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\TestCreator.g.resources
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\TestCreator.Properties.Resources.resources
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\TestCreator.csproj.GenerateResource.cache
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\TestCreator.exe
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\TestCreator.pdb
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\TestPathEditor.g.cs
+C:\Users\Daniel Mareš\Desktop\Programování\TestCreator\TestCreator\TestCreator\obj\Debug\TestPathEditor.baml
