@@ -54,7 +54,7 @@ namespace TestCreator
             for (int x = 0; x < 3; x++)
             {
                 string txt = System.IO.File.ReadAllLines(TestPathB.Text)[question];
-                if (Regex.IsMatch(txt, @"[?*]{1}.+ [*]{1}[?]{1}")) 
+                if (Regex.IsMatch(txt, @"[?]{1}[*]{1}.+[*]{1}[?]{1}")) 
                 {
                     txt = txt.Replace("?*", "");
                     txt = txt.Replace("*?", "");
@@ -65,6 +65,7 @@ namespace TestCreator
                 {
                     txt = txt.Replace("O*","");
                     txt = txt.Replace("*O", "");
+                    questionNumber = questionNumber + 1;
                     if(x==1)
                     {
                         q.AnswerA = txt;
@@ -85,6 +86,7 @@ namespace TestCreator
                 {
                     txt = txt.Replace("X*", "");
                     txt = txt.Replace("*X", "");
+                    questionNumber = questionNumber + 1;
                     if (x == 1)
                     {
                         q.AnswerA = txt;

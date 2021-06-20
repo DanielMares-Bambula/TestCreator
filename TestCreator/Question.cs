@@ -10,7 +10,6 @@ namespace TestCreator
     class Question : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public List<Question> Questinos = new List<Question>();
 
         private string q = "";
         private string a = "";
