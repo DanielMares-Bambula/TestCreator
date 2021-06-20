@@ -61,8 +61,9 @@ namespace TestCreator
                     txt = txt.Replace("*?", "");
                     q.Q = txt;
                     questionNumber = questionNumber + 1;
-                    BindingExpression expr = Question.GetBindingExpression(TextBox.TextProperty);
-                    expr?.UpdateSource();
+                    //BindingExpression expr = Question.GetBindingExpression(TextBox.TextProperty);
+                    //expr?.UpdateSource();
+                    Question.Text = txt;
                 }
                 if (Regex.IsMatch(txt, @"[O]{1}[*]{1}.+[*]{1}[O]{1}")) 
                 {
@@ -73,22 +74,25 @@ namespace TestCreator
                     {
                         q.AnswerA = txt;
                         a = true;
-                        BindingExpression expr = AnswerA.GetBindingExpression(TextBox.TextProperty);
-                        expr?.UpdateSource();
+                        //BindingExpression expr = AnswerA.GetBindingExpression(TextBox.TextProperty);
+                        //expr?.UpdateSource();
+                        AnswerA.Text = txt;
                     }
                     if (x == 2)
                     {
                         q.AnswerB = txt;
                         b = true;
-                        BindingExpression expr = AnswerB.GetBindingExpression(TextBox.TextProperty);
-                        expr?.UpdateSource();
+                        //BindingExpression expr = AnswerB.GetBindingExpression(TextBox.TextProperty);
+                        //expr?.UpdateSource();
+                        AnswerB.Text = txt;
                     }
                     if (x == 3)
                     {
                         q.AnswerC = txt;
                         c = true;
-                        BindingExpression expr = AnswerC.GetBindingExpression(TextBox.TextProperty);
-                        expr?.UpdateSource();
+                        //BindingExpression expr = AnswerC.GetBindingExpression(TextBox.TextProperty);
+                        //expr?.UpdateSource();
+                        AnswerC.Text = txt;
                     }
                 }
                 if (Regex.IsMatch(txt, @"[X]{1}[*]{1}.+[*]{1}[X]{1}"))
@@ -100,22 +104,25 @@ namespace TestCreator
                     {
                         q.AnswerA = txt;
                         a = false;
-                        BindingExpression expr = AnswerA.GetBindingExpression(TextBox.TextProperty);
-                        expr?.UpdateSource();
+                        //BindingExpression expr = AnswerA.GetBindingExpression(TextBox.TextProperty);
+                        //expr?.UpdateSource();
+                        AnswerA.Text = txt;
                     }
                     if (x == 2)
                     {
                         q.AnswerB = txt;
                         b = false;
-                        BindingExpression expr = AnswerB.GetBindingExpression(TextBox.TextProperty);
-                        expr?.UpdateSource();
+                        //BindingExpression expr = AnswerB.GetBindingExpression(TextBox.TextProperty);
+                        //expr?.UpdateSource();
+                        AnswerB.Text = txt;
                     }
                     if (x == 3)
                     {
                         q.AnswerC = txt;
                         c = false;
-                        BindingExpression expr = AnswerC.GetBindingExpression(TextBox.TextProperty);
-                        expr?.UpdateSource();
+                        //BindingExpression expr = AnswerC.GetBindingExpression(TextBox.TextProperty);
+                        //expr?.UpdateSource();
+                        AnswerC.Text = txt;
                     }
                 }
             }           
