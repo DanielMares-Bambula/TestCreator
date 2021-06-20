@@ -25,6 +25,10 @@ namespace TestCreator
     public partial class MainWindow : Window
     {
         public int questionNumber = 0;
+        public bool a;
+        public bool b;
+        public bool c;
+
         public MainWindow()
         {
             TestPath path = new TestPath();
@@ -49,7 +53,7 @@ namespace TestCreator
             Question q = new Question();
             for (int x = 0; x < 3; x++)
             {
-                string txt = System.IO.File.ReadAllLines(@"C:\Users\Daniel Mareš\Desktop\Test1.txt")[question];
+                string txt = System.IO.File.ReadAllLines(TestPathB.Text)[question];
                 if (Regex.IsMatch(txt, @"[?*]{1}.+ [*]{1}[?]{1}")) 
                 {
                     txt = txt.Replace("?*", "");
@@ -64,17 +68,17 @@ namespace TestCreator
                     if(x==1)
                     {
                         q.AnswerA = txt;
-                        q.A = true;
+                        a = true;
                     }
                     if (x == 2)
                     {
                         q.AnswerB = txt;
-                        q.B = true;
+                        b = true;
                     }
                     if (x == 3)
                     {
                         q.AnswerC = txt;
-                        q.C = true;
+                        c = true;
                     }
                 }
                 if (Regex.IsMatch(txt, @"[X]{1}[*]{1}.+[*]{1}[X]{1}"))
@@ -84,24 +88,24 @@ namespace TestCreator
                     if (x == 1)
                     {
                         q.AnswerA = txt;
-                        q.A = false;
+                        a = false;
                     }
                     if (x == 2)
                     {
                         q.AnswerB = txt;
-                        q.B = false;
+                        b = false;
                     }
                     if (x == 3)
                     {
                         q.AnswerC = txt;
-                        q.C = false;
+                        c = false;
                     }
                 }
             }           
         }
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            if (q.A) 
+            if (a) 
             {
                 AnswerA.Background = Brushes.Green;
             }
@@ -109,7 +113,7 @@ namespace TestCreator
             {
                 AnswerA.Background = Brushes.Red;
             }
-            if (q.B)
+            if (b)
             {
                 AnswerB.Background = Brushes.Green;
             }
@@ -117,7 +121,7 @@ namespace TestCreator
             {
                 AnswerB.Background = Brushes.Red;
             }
-            if (q.C)
+            if (c)
             {
                 AnswerC.Background = Brushes.Green;
             }

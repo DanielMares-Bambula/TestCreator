@@ -16,9 +16,6 @@ namespace TestCreator
         private string a = "";
         private string b = "";
         private string c = "";
-        public bool A { get; set; }
-        public bool B { get; set; }
-        public bool C { get;set; }
         public string Q
         {
             get => q;

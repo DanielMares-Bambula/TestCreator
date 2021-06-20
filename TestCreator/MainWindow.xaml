@@ -30,9 +30,9 @@
         <Label Grid.Column="1" Grid.Row="3"> b)</Label>
         <Label Grid.Column="1" Grid.Row="4"> c)</Label>
 
-        <Label x:Name="AnswerA" Grid.Column="2" Grid.Row="2" Content="{Binding A, Mode=OneWay}"></Label>
-        <Label x:Name="AnswerB" Grid.Column="2" Grid.Row="3" Content="{Binding B, Mode=OneWay}"></Label>
-        <Label x:Name="AnswerC" Grid.Column="2" Grid.Row="4" Content="{Binding C, Mode=OneWay}"></Label>
+        <Label x:Name="AnswerA" Grid.Column="2" Grid.Row="2" Content="{Binding A}"></Label>
+        <Label x:Name="AnswerB" Grid.Column="2" Grid.Row="3" Content="{Binding B}"></Label>
+        <Label x:Name="AnswerC" Grid.Column="2" Grid.Row="4" Content="{Binding C}"></Label>
 
         <Button x:Name="Next" Grid.Column="3" Grid.Row="4" Click="Next_Click">Next -></Button>
         <Button x:Name="Submit" Grid.Column="3" Grid.Row="5" Background="Blue" Click="Submit_Click">Submit</Button>
