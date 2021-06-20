@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
-using System.Collections.Generic;
+
 
 namespace TestCreator
 {
@@ -13,8 +13,11 @@ namespace TestCreator
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPathChanged(string property)
         {
-            if (PropertyChanged != null)
+            if (PropertyChanged != null) 
+            {
                 PropertyChanged(this, new PropertyChangedEventArgs(property));
+            }
+               
         }
         private string testPathS;
         public string TestPathS

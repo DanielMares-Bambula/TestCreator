@@ -10,16 +10,19 @@ namespace TestCreator
     class Question : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        private List<Question> Questinos = new List<Question>();
+        public List<Question> Questinos = new List<Question>();
 
         private string q = "";
         private string a = "";
         private string b = "";
         private string c = "";
+        public bool A { get; set; }
+        public bool B { get; set; }
+        public bool C { get;set; }
         public string Q
         {
             get => q;
-            set { q = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Question")); }
+            set { q = value; PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Q")); }
         }
         public string AnswerA
         {
