@@ -41,25 +41,28 @@ namespace TestCreator
             BindingExpression expr = TestPathB.GetBindingExpression(TextBox.TextProperty);
             expr?.UpdateSource();
             questionNumber = 0;
-            QuestionBuilder(questionNumber);
+            QuestionBuilder();
         }
         private void Next_Click(object sender, RoutedEventArgs e)
         {
 
-             QuestionBuilder(questionNumber);
+             QuestionBuilder();
         }
-        private void QuestionBuilder(int question)
+        private void QuestionBuilder()
         {
+            string[] input = System.IO.File.ReadAllLines(TestPathB.Text);
             Question q = new Question();
-            for (int x = 0; x < 3; x++)
+            for (int x = 0; x < 4; x++)
             {
-                string txt = System.IO.File.ReadAllLines(TestPathB.Text)[question];
+                string txt = input[questionNumber];
                 if (Regex.IsMatch(txt, @"[?]{1}[*]{1}.+[*]{1}[?]{1}")) 
                 {
                     txt = txt.Replace("?*", "");
                     txt = txt.Replace("*?", "");
                     q.Q = txt;
                     questionNumber = questionNumber + 1;
+                    BindingExpression expr = Question.GetBindingExpression(TextBox.TextProperty);
+                    expr?.UpdateSource();
                 }
                 if (Regex.IsMatch(txt, @"[O]{1}[*]{1}.+[*]{1}[O]{1}")) 
                 {
@@ -70,16 +73,22 @@ namespace TestCreator
                     {
                         q.AnswerA = txt;
                         a = true;
+                        BindingExpression expr = AnswerA.GetBindingExpression(TextBox.TextProperty);
+                        expr?.UpdateSource();
                     }
                     if (x == 2)
                     {
                         q.AnswerB = txt;
                         b = true;
+                        BindingExpression expr = AnswerB.GetBindingExpression(TextBox.TextProperty);
+                        expr?.UpdateSource();
                     }
                     if (x == 3)
                     {
                         q.AnswerC = txt;
                         c = true;
+                        BindingExpression expr = AnswerC.GetBindingExpression(TextBox.TextProperty);
+                        expr?.UpdateSource();
                     }
                 }
                 if (Regex.IsMatch(txt, @"[X]{1}[*]{1}.+[*]{1}[X]{1}"))
@@ -91,16 +100,22 @@ namespace TestCreator
                     {
                         q.AnswerA = txt;
                         a = false;
+                        BindingExpression expr = AnswerA.GetBindingExpression(TextBox.TextProperty);
+                        expr?.UpdateSource();
                     }
                     if (x == 2)
                     {
                         q.AnswerB = txt;
                         b = false;
+                        BindingExpression expr = AnswerB.GetBindingExpression(TextBox.TextProperty);
+                        expr?.UpdateSource();
                     }
                     if (x == 3)
                     {
                         q.AnswerC = txt;
                         c = false;
+                        BindingExpression expr = AnswerC.GetBindingExpression(TextBox.TextProperty);
+                        expr?.UpdateSource();
                     }
                 }
             }           

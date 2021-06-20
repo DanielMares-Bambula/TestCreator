@@ -24,15 +24,15 @@
         <TextBox Name="TestPathB" Grid.Column="2" Grid.Row="0" Text ="{Binding TestPathS, UpdateSourceTrigger = Explicit}" Background="DarkOliveGreen"></TextBox>
         <Button x:Name="AddPath" Grid.Column="3" Grid.Row="0" Click="AddPath_Click">+</Button>
 
-        <Label x:Name="Question" Grid.Column="2" Grid.Row="1" Content="{Binding Q}"></Label>
+        <Label x:Name="Question" Grid.Column="2" Grid.Row="1" Content="{Binding Q, UpdateSourceTrigger=Explicit}"></Label>
 
         <Label Grid.Column="1" Grid.Row="2"> a)</Label>
         <Label Grid.Column="1" Grid.Row="3"> b)</Label>
         <Label Grid.Column="1" Grid.Row="4"> c)</Label>
 
-        <Label x:Name="AnswerA" Grid.Column="2" Grid.Row="2" Content="{Binding A}"></Label>
-        <Label x:Name="AnswerB" Grid.Column="2" Grid.Row="3" Content="{Binding B}"></Label>
-        <Label x:Name="AnswerC" Grid.Column="2" Grid.Row="4" Content="{Binding C}"></Label>
+        <Label x:Name="AnswerA" Grid.Column="2" Grid.Row="2" Content="{Binding A, UpdateSourceTrigger=Explicit}"></Label>
+        <Label x:Name="AnswerB" Grid.Column="2" Grid.Row="3" Content="{Binding B, UpdateSourceTrigger=Explicit}"></Label>
+        <Label x:Name="AnswerC" Grid.Column="2" Grid.Row="4" Content="{Binding C, UpdateSourceTrigger=Explicit}"></Label>
 
         <Button x:Name="Next" Grid.Column="3" Grid.Row="4" Click="Next_Click">Next -></Button>
         <Button x:Name="Submit" Grid.Column="3" Grid.Row="5" Background="Blue" Click="Submit_Click">Submit</Button>
